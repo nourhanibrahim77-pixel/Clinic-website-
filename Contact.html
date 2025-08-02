@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تواصل مع دكتور مصطفى</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>تواصل معنا</h1>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">عن الدكتور</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <main>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="اسمك" required>
+      <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+      <textarea id="message" placeholder="رسالتك" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+    <p id="feedback"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 عيادة د. مصطفى</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const feedback = document.getElementById("feedback");
+      feedback.innerText = `شكرًا يا ${name}، تم استلام رسالتك!`;
+    }
+  </script>
+</body>
+</html>
